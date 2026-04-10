@@ -16,3 +16,6 @@
 - If `tesseract.exe` is not on PATH, set `SCREEN_TRANSLATE_TESSERACT_CMD` to the exe path or install folder; the app now auto-resolves both.
 - README.md documents the pipeline, installation, and language switching workflow.
 - README.vi.md provides the Vietnamese version of the project documentation.
+- Packaging: `build.py` (PyInstaller build script), `installer.ps1` (PowerShell installer), `setup.bat` (batch installer launcher), `run.bat` (application launcher).
+- PACKAGING.md provides complete guide for packaging and distributing the app to other computers (ZIP distribution, standalone EXE, or full installer).
+- version.py contains app metadata and version information used by build scripts.
