@@ -1,0 +1,17 @@
+# ScreenTranslate Context
+
+- App: Windows desktop Screen Overlay Translator.
+- Entry point: `screen_overlay_translator.py`.
+- Hotkey: `Ctrl+Shift+E` starts snipping mode.
+- Hotkey implementation: native Win32 `RegisterHotKey` on Windows, with `keyboard` as a fallback.
+- GUI stack: PyQt6 system tray, transparent snipping overlay, always-on-top translation overlay.
+- Tray menu: source OCR language and target translation language can be switched at runtime.
+- Supported languages: English, Chinese (Simplified), Japanese, Korean, and Vietnamese.
+- Overlay actions: Copy All and Copy Sel buttons on the translation overlay, plus click-to-select translated blocks.
+- OCR: pytesseract `image_to_data()` with paragraph grouping and confidence filtering.
+- OCR language data: local `tessdata/eng.traineddata`, `chi_sim.traineddata`, `jpn.traineddata`, `kor.traineddata`, and `vie.traineddata` are included; OCR auto mode uses all available supported languages.
+- Capture: `mss` with a DPI-aware logical-to-physical monitor mapping.
+- Translation: `deep-translator` GoogleTranslator from auto/English to Vietnamese.
+- Requirements: install Python deps from `requirements.txt` and install Tesseract-OCR for Windows.
+- If `tesseract.exe` is not on PATH, set `SCREEN_TRANSLATE_TESSERACT_CMD` to the exe path or install folder; the app now auto-resolves both.
+- README.md documents the pipeline, installation, and language switching workflow.
