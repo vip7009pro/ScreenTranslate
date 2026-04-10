@@ -15,3 +15,4 @@
 - Requirements: install Python deps from `requirements.txt` and install Tesseract-OCR for Windows.
 - If `tesseract.exe` is not on PATH, set `SCREEN_TRANSLATE_TESSERACT_CMD` to the exe path or install folder; the app now auto-resolves both.
 - README.md documents the pipeline, installation, and language switching workflow.
+- README.vi.md provides the Vietnamese version of the project documentation.
